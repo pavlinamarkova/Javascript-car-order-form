@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car order form</title>
+    <link href="autosalon.css" rel="stylesheet" type="text/css" />
+</head>
+<body onload='hideTotal()'>
+  <h2>Objednávka vozidla</h2>
+        <form action="" id="autosalon" name="autosalon" onsubmit="return false; document.autosalon.email.focus()">
+            <h3>Vyberte si  model auta:</h3>
+            <label for="vuberAuta"></label>
+            <select name="vyberAuta" id="vyberAuta" onchange="calculateTotal()">
+              <option value="mercedes">Mercedes 1 500 000 Kč</option>
+              <option value="volvo">Volvo 1 200 000 Kč</option>
+              <option value="audi">Audi 1 350 000 Kč</option>
+              <option  value="bmw">BMW 1 400 000 Kč</option>
+            </select>
+            <br />
+            <hr />
+              <h3>Vyberte si dodatečnou výbavu automobilu:</h3>
+              <label for="parkovaciKamery">
+                <input type="checkbox" id="parkovaciKamery" name="doplnky" value="parkovaciKamery" onclick="calculateTotal()" />Parkovací kamery (+10 000 Kč)
+              </label>
+              <br>
+              <label for="litaKola">
+                <input type="checkbox" id="litaKola"  name="doplnky" value="litaKola" onclick="calculateTotal()" />Litá kola (+20 000 Kč)
+              </label>
+              <br>
+              <label for="kozeneSedacky">
+                <input type="checkbox" id="kozeneSedacky" name="doplnky" value="kozeneSedacky" onclick="calculateTotal()" />Kožené sedačky (+ 50 000 Kč)
+              </label>
+              <br>
+              <label for="tuning">
+                <input type="checkbox" id="tuning" name="doplnky" value="tuning" onclick="calculateTotal()"/>Tuningová úprava (+20 % ze základní ceny vozu)
+              </label>
+              <br>
+              <hr>
+
+
+              <h3>Výběr barvy vozidla:</h3>
+
+
+              <label>
+                <input  type="radio" name="selectedColor" value="zakladni" onclick="calculateTotal()"/>Základní barva (bez příplatku)
+              </label>
+              <br>
+              <label>
+                <input  name="selectedColor"  type="radio" value="palenyLak" onclick="calculateTotal()"/>Pálený lak (s příplatkem 5% ze základní ceny vozu)
+              </label>
+              <br>
+              <label >
+                <input  name="selectedColor" type="radio" value="metalicka" onclick="calculateTotal()"/>Metalická barvy (s příplatkem 7% ze základní ceny vozu)
+              </label>
+              <hr>
+              <br>
+
+            <button value="total" id="total"> Spočítat celkovou cenu</button>
+            <div id="totalPrice" style="display: block;"></div>     
+            <br>
+            Zadejte svůj rozpočet v kč:
+            <input type="number" id="penize">
+            
+            <button value="poslat" id="vyhodnotit"> Vyhodnotit</button>
+                     
+            <div id="vyhodnoceni"></div>
+            Zadejte svůj  email k odeslání objednávky:
+            <input type='text' name='email'/></li>
+            <input type="submit" name="submit" value="Kontrola-emailu" onclick="ValidateEmail(document.autosalon.email)"/>
+          </form>
+
+    <script language="javascript" type="text/javascript" src="autosalon.js"></script>	
+</body>
+</html>
