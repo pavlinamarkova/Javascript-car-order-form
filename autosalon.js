@@ -43,7 +43,7 @@ var cenyDoplnku= new Array ();
 cenyDoplnku["parkovaciKamery"] = 10000;
 cenyDoplnku["litaKola"] = 20000;
 cenyDoplnku ["kozeneSedacky"]= 50000;
-cenyDoplnku["tuning"]= 50000;
+cenyDoplnku["tuning"]= (zjistiCenuAuta()/100*20);
 
 
 function zjistiCenuDoplnku()
