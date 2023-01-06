@@ -19,7 +19,6 @@ cenyBarev["palenyLak"] = (zjistiCenuAuta()/100*5);
 cenyBarev["zakladni"] = 0;
 cenyBarev ["metalicka"]= (zjistiCenuAuta()/100*7);
 
-
 function zjistiCenuBarvy()
 {  
     var cenabarvy=0;
@@ -39,7 +38,7 @@ var cenyDoplnku= new Array ();
 cenyDoplnku["parkovaciKamery"] = 10000;
 cenyDoplnku["litaKola"] = 20000;
 cenyDoplnku ["kozeneSedacky"]= 50000;
-cenyDoplnku["tuning"]= 50000;
+cenyDoplnku["tuning"]= (zjistiCenuAuta()/100*20);
 
 function zjistiCenuDoplnku()
 {  
