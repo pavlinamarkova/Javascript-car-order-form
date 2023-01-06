@@ -7,12 +7,12 @@
     <title>Car order form</title>
     <link href="autosalon.css" rel="stylesheet" type="text/css" />
 </head>
-<body onload='hideTotal()'>
+<body>
   <h2>Objednávka vozidla</h2>
         <form action="" id="autosalon" name="autosalon" onsubmit="return false; document.autosalon.email.focus()">
             <h3>Vyberte si  model auta:</h3>
             <label for="vuberAuta"></label>
-            <select name="vyberAuta" id="vyberAuta" ">
+            <select name="vyberAuta" id="vyberAuta" >
               <option value="mercedes">Mercedes 1 500 000 Kč</option>
               <option value="volvo">Volvo 1 200 000 Kč</option>
               <option value="audi">Audi 1 350 000 Kč</option>
@@ -30,7 +30,7 @@
               </label>
               <br>
               <label for="kozeneSedacky">
-                <input type="checkbox" id="kozeneSedacky" name="doplnky" value="kozeneSedacky" />Kožené sedačky (+ 50 000 Kč)
+                <input type="checkbox" id="kozeneSedacky" name="doplnky" value="kozeneSedacky"  />Kožené sedačky (+ 50 000 Kč)
               </label>
               <br>
               <label for="tuning">
@@ -73,4 +73,4 @@
 
     <script language="javascript" type="text/javascript" src="autosalon.js"></script>	
 </body>
-</html>
+</htm
